@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://jsfjc5g38efa"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_koqny"]
+[ext_resource type="PackedScene" uid="uid://y18tbhn5qnba" path="res://player.tscn" id="1_nhdxt"]
+[ext_resource type="PackedScene" uid="uid://dphtilbdsdg13" path="res://Tilemaps/grass-01.tscn" id="2_fubxj"]
+[ext_resource type="PackedScene" uid="uid://dt5tutw3e5rw0" path="res://Orb.tscn" id="4_o88ht"]
+[ext_resource type="Script" path="res://DayNightCycle.gd" id="4_q3y0a"]
+[ext_resource type="Texture2D" uid="uid://gv8x7vh2coxr" path="res://assets/daynightcycle-gradient-texture.tres" id="5_f14go"]
+[ext_resource type="PackedScene" uid="uid://ceolcwatpaicu" path="res://ui/daynightcycle_ui.tscn" id="6_vk8ql"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_koqny")
+
+[node name="Player" parent="." instance=ExtResource("1_nhdxt")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Grass-01" parent="." instance=ExtResource("2_fubxj")]
+
+[node name="Orb" parent="." instance=ExtResource("4_o88ht")]
+position = Vector2(250, 200)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("4_q3y0a")
+gradient_texture = ExtResource("5_f14go")
+INGAME_SPEED = 5.0
+
+[node name="DayNightCycleUI" parent="." instance=ExtResource("6_vk8ql")]
