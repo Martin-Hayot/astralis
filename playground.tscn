@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dt5tutw3e5rw0" path="res://Orb.tscn" id="4_o88ht"]
 [ext_resource type="Script" path="res://DayNightCycle.gd" id="4_q3y0a"]
 [ext_resource type="Texture2D" uid="uid://gv8x7vh2coxr" path="res://assets/daynightcycle-gradient-texture.tres" id="5_f14go"]
-[ext_resource type="PackedScene" uid="uid://ceolcwatpaicu" path="res://ui/daynightcycle_ui.tscn" id="6_vk8ql"]
+[ext_resource type="PackedScene" uid="uid://ddkxmi4ho4y0c" path="res://hud.tscn" id="7_1vnrh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_koqny")
@@ -25,4 +25,4 @@ script = ExtResource("4_q3y0a")
 gradient_texture = ExtResource("5_f14go")
 INGAME_SPEED = 5.0
 
-[node name="DayNightCycleUI" parent="." instance=ExtResource("6_vk8ql")]
+[node name="CanvasLayer" parent="." instance=ExtResource("7_1vnrh")]

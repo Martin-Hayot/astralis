@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://y18tbhn5qnba"]
+[gd_scene load_steps=116 format=3 uid="uid://y18tbhn5qnba"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_evhjr"]
 [ext_resource type="Texture2D" uid="uid://ddpfw7adjgwfx" path="res://Player/Sprites/idle.png" id="1_r7hcx"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="4_c51c4"]
 [ext_resource type="Script" path="res://Player/Scripts/state_idle.gd" id="5_amfi6"]
 [ext_resource type="Script" path="res://Player/Scripts/state_walk.gd" id="6_dgiqu"]
+[ext_resource type="Script" path="res://Player/Scripts/state_attack.gd" id="7_jtl2q"]
 [ext_resource type="Texture2D" uid="uid://ba0yj38c2r80u" path="res://Player/Sprites/light.png" id="8_u0lva"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xbhjy"]
@@ -815,7 +816,7 @@ libraries = {
 position = Vector2(-2, -8)
 sprite_frames = SubResource("SpriteFrames_cbq85")
 animation = &"idle_down_right"
-frame_progress = 0.96276
+frame_progress = 0.76275
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("4_c51c4")
@@ -825,6 +826,9 @@ script = ExtResource("5_amfi6")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("6_dgiqu")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("7_jtl2q")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.923466, 0.678235, 0, 1)

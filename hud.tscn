@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddkxmi4ho4y0c"]
+
+[ext_resource type="PackedScene" uid="uid://ceolcwatpaicu" path="res://ui/daynightcycle_ui.tscn" id="1_tyw4f"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="DayNightCycleUI" parent="." instance=ExtResource("1_tyw4f")]
